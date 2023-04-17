@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD主導覽練習檔</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+        /* 電腦與平板上應用的樣式 */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #293241;
+            /* margin: 0px; */
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+
+        .menu_icon {
+            display: none;
+        }
+
+        #about {
+            background-color: #f7b538;
+        }
+
+
+        #food_gallery {
+            background-color: #97a97c;
+        }
+
+        #comment {
+            background-color: #005f73;
+        }
+
+        #header1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icon {
+            width: 100px;
+            height: 50px;
+            background-color: #e63946;
+            display: flex;
+        }
+
+        .icon>a {
+            flex: 1;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 2em;
+            padding-bottom: 3px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .navbar {
+            width: 60%;
+            height: 50px;
+            background-color: #293241;
+        }
+
+        #navbar_list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        #navbar_list>li {
+            width: 100%;
+            flex: 1;
+            display: flex;
+
+        }
+
+        #navbar_list>li>a {
+            color: white;
+            flex: 1;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 5px;
+            border-left: 3px solid white;
+            transition: all 1s;
+            font-family: 'Dancing Script', cursive;
+
+        }
+
+        #navbar_list>li>a:hover {
+            background-color: white;
+            color: #293241;
+            transform: translateX(5px);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            /* align-items: stretch; */
+            padding: 10px;
+        }
+
+        #about>.container>div {
+            width: 45%;
+            padding: 10px;
+            margin-right: 5px;
+            background-color: white;
+        }
+
+        .enviorment {
+            display: flex;
+            justify-content: center;
+            box-shadow: 5px 5px 5px #595959;
+        }
+
+        .enviorment>img {
+            width: 100%;
+
+        }
+
+        .about_describe {
+            letter-spacing: 0.7px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .about_describe::first-letter {
+            font-size: 30px;
+        }
+
+        #food_gallery>.container>div {
+            width: 28%;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 5px 5px 5px #595959;
+        }
+
+        #food_gallery>.container>div:hover {
+            transform: scale(1.1);
+        }
+
+        .food_photo>img {
+            width: 100%;
+        }
+
+        #customer_comment {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        #customer_comment>li {
+            width: 30%;
+            height: 250px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .comment_photo>img {
+            height: 100%;
+        }
+
+        .comment>p {
+            margin: 0 10px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+
+        /* 手機 */
+        @media screen and (max-width: 500px) {
+            #header1 {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .menu_icon {
+                display: block;
+                width: 40px;
+                height: 30px;
+                background-color: #f7b538;
+                position: relative;
+                top: 10px;
+                right: 10px
+            }
+
+            .menu_icon::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                height: 4px;
+                width: 20px;
+                border-top: 12px double white;
+                border-bottom: 4px solid white;
+            }
+
+            .navbar {
+                width: 100%;
+                height: auto;
+            }
+
+            #navbar_list {
+                flex-direction: column;
+            }
+
+            #navbar_list>li>a {
+                border-top: 3px solid white;
+                border-left: none;
+                justify-content: flex-start;
+                text-indent: 32px;
+            }
+
+            /* #about {
+                flex-wrap: wrap;
+            } */
+
+            .container {
+                width: 100%;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            /* 
+            .container>div {
+                width: 100%;
+            } */
+
+            #about>.container>div {
+                width: 90%;
+                margin: auto;
+            }
+
+            #about>.container>.enviorment {
+                margin-bottom: 15px;
+            }
+
+            #food_gallery>.container>div {
+                width: 90%;
+                margin: auto;
+            }
+
+            #food_gallery>.container>.food_photo {
+                margin-bottom: 15px;
+            }
+
+            #customer_comment {
+                justify-content: center;
+            }
+
+            #customer_comment>li {
+                width: 40%;
+                /* margin: auto; */
+                /* margin-bottom: 15px; */
+            }
+
+            .comment_photo>img {
+                width: 100%;
+            }
+
+
+            #customer_comment :nth-child(1) {
+                order: 1;
+            }
+
+            #customer_comment :nth-child(2) {
+                order: 1;
+                background-color: #f7b538;
+            }
+
+            #customer_comment :nth-child(3) {
+                order: 3;
+            }
+
+            #customer_comment :nth-child(4) {
+                order: 2;
+            }
+
+            #customer_comment :nth-child(5) {
+                order: 4;
+            }
+
+            #customer_comment :nth-child(6) {
+                order: 4;
+                background-color: #f7b538;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header1">
+        <div class="icon">
+            <a href="#">Home</a>
+        </div>
+        <div class="menu_icon"></div>
+        <nav class="navbar">
+            <ul id="navbar_list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <div class="container">
+            <div class="enviorment"><img src="imgs/restaurant.avif" alt="">
+            </div>
+            <div class="about_describe">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, esse voluptates quasi veritatis quas ea
+                    dolor, rerum saepe similique, repellendus eaque commodi! Quae accusamus ipsum enim obcaecati
+                    necessitatibus autem inventore?
+                    Tempore tenetur asperiores facilis. Omnis culpa ea aliquid, repudiandae quo eligendi veniam eum
+                    nobis quibusdam, aspernatur molestiae sequi assumenda exercitationem vel labore error earum quas
+                    dignissimos, odio in. Sed, quia!
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="food_gallery">
+        <div class="container">
+            <div class="food_photo"><img src="imgs/caesar.jpg" alt=""></div>
+            <div class="food_photo"><img src="imgs/cake.jpg" alt=""></div>
+            <div class="food_photo"><img src="imgs/greek-salad.jpg" alt=""></div>
+        </div>
+    </section>
+    <section id="comment">
+        <div class="container">
+            <ul id="customer_comment">
+                <li class="comment_photo"><img src="imgs/food3.avif" alt=""></li>
+                <li class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sed molestias odit natus nulla
+                    </p>
+                </li>
+                <li class="comment_photo"><img src="imgs/food5.avif" alt=""></li>
+                <li class="comment">
+                    <p>Adipisci eum dolorum veritatis soluta,
+                        obcaecati sed beatae. Explicabo fugiat consectetur quos nam rem repellendus quibusdam facilis
+                        ipsam
+                        in
+                        eos, dolor laboriosam!</p>
+                </li>
+                <li class="comment_photo"><img src="imgs/food4.avif" alt=""></li>
+                <li class="comment">
+                    <p>
+                        Eligendi ut voluptatem vitae maiores unde quaerat eum doloribus fugit, commodi repudiandae
+                        accusamus
+                        magnam assumenda tempore sapiente quia tempora.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
